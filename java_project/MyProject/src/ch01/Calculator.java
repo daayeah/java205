@@ -19,6 +19,6 @@ public class Calculator {
 		cal.plus(10, 20);
 		cal.minus(20, 10);
 		cal.multi(2, 5);
-		cal.div(10, 3);
+		cal.div(10, 4);
 	}
 }
