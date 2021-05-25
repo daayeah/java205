@@ -25,8 +25,9 @@ public class Member {
 			while(age >= 20) {
 				System.out.println("무료 건강검진이 가능합니다.");
 				if(age >= 40) {
-					System.out.println("암 검사도 가능합니다.");
-				} break;
+					System.out.println("암 검사도 가능합니다."); 
+					break;
+				}
 			}
 		} else {
 			System.out.println("무료 검진 대상이 아닙니다.");
