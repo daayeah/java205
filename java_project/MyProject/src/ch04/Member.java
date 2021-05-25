@@ -21,17 +21,17 @@ public class Member {
 			System.out.println("무료 접종 대상이 아닙니다.");
 		}
 
-		if(thisYear % 2 == inputYear % 2) {
-			if(age >= 20) {
+		if(age >= 20) {
+			if(thisYear % 2 == inputYear % 2) {
 				System.out.println("무료 건강검진이 가능합니다.");
 				if(age >= 40) {
-					System.out.println("암 검사도 가능합니다."); 
+					System.out.println("무료 암 검사가 가능합니다."); 
 				}
 			} else {
-				System.out.println("무료 검진 대상이 아닙니다.");
+				System.out.println("내년에 무료 건강검진이 가능합니다.");
 			}
 		} else {
-			System.out.println("내년에 무료 건강검진이 가능합니다.");
+			System.out.println("무료 검진 대상이 아닙니다.");
 		}
 	}
 }
