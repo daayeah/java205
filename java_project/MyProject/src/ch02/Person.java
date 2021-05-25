@@ -1,22 +1,23 @@
 package ch02;
 
-import java.util.Scanner;
-
 public class Person {
-	public static void main(String[] args) {
-		String name, phoneNo, idNo;
-		
-		System.out.print("이름을 입력하세요 : ");
-		Scanner sc = new Scanner(System.in);
-		name = sc.nextLine();
-		System.out.print("전화번호를 입력하세요 : ");
-		Scanner sc2 = new Scanner(System.in);
-		phoneNo = sc2.nextLine();		
-		System.out.print("주민등록번호를 입력하세요 : ");
-		Scanner sc3 = new Scanner(System.in);
-		idNo = sc3.nextLine();
+	String name;
+	String phoneNo = "010-0000-0000";
+	String idNo1 = "100000-0000000";
+	long idNo2 = 2000000000000L;
 
-		System.out.println();
-		System.out.print("회원정보 : " + name + " / " + phoneNo + " / "+  idNo);
+	void showData() {
+		System.out.println("회원 이름 : " + this.name);
+		System.out.println("회원 전화번호 : " + this.phoneNo);
+		System.out.println("회원 주민등록번호1 : " + this.idNo1);
+		System.out.println("회원 주민등록번호2 : " + this.idNo2);
+	}
+	
+	public static void main(String[] args) {
+		Person person = new Person();
+		
+		System.out.println("이름 : " + person.name);
+		person.name = "익명";
+		person.showData();
 	}
 }
