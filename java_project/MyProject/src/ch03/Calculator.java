@@ -15,18 +15,19 @@ public class Calculator {
 	void div(int num1, int num2) {
 		System.out.println("나눗셈 : " + num1 + "/" + num2 + "=" + (num1 / num2));
 	}
-	void circum(double radius, double pi) {
-		double circum = 2 * pi * radius;
+	void circum(double radius, double PI) {
+		double circum = 2 * PI * radius;
 		System.out.println("원의 둘레 : " + (Math.round(circum * 100) / 100.0));
 	}
-	void area(double radius, double pi) {
-		double area = pi * radius * radius;
+	void area(double radius, double PI) {
+		double area = PI * radius * radius;
 		System.out.println("원의 넓이 : " + (Math.round(area * 100) / 100.0));
 	}
 
 	public static void main(String[] args) {
 		int num1, num2;
-		double radius, pi = 3.14;
+		double radius;
+		final double PI = 3.14;
 
 		System.out.print("첫번째 숫자 입력 : ");
 		Scanner sc = new Scanner(System.in);
@@ -48,7 +49,7 @@ public class Calculator {
 		radius = sc3.nextDouble();
 		
 		Calculator cal2 = new Calculator();
-		cal2.circum(radius, pi);
-		cal2.area(radius, pi);
+		cal2.circum(radius, PI);
+		cal2.area(radius, PI);
 	}
 }
