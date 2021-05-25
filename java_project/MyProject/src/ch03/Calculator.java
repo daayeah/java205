@@ -16,10 +16,12 @@ public class Calculator {
 		System.out.println("나눗셈 : " + num1 + "/" + num2 + "=" + (num1 / num2));
 	}
 	void circum(int radius, double pi) {
-		System.out.println("원의 둘레 : " + (2 * pi * radius));
+		double circum = 2 * pi * radius;
+		System.out.println("원의 둘레 : " + (Math.round(circum * 100) / 100.0));
 	}
 	void area(int radius, double pi) {
-		System.out.println("원의 넓이 : " + (pi * radius * radius));
+		double area = pi * radius * radius;
+		System.out.println("원의 넓이 : " + (Math.round(area * 100) / 100.0));
 	}
 
 	public static void main(String[] args) {
