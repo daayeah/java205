@@ -21,7 +21,7 @@ public class Calculator {
 	}
 	void area(double radius, double PI) {
 		double area = PI * radius * radius;
-		System.out.println("원의 넓이 : " + (Math.round(area * 100) / 100.));
+		System.out.println("원의 넓이 : " + (Math.round(area * 100) / 100.0));
 	}
 
 	public static void main(String[] args) {
