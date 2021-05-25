@@ -22,14 +22,16 @@ public class Member {
 		}
 
 		if(thisYear % 2 == inputYear % 2) {
-			while(age >= 20) {
+			if(age >= 20) {
 				System.out.println("무료 건강검진이 가능합니다.");
 				if(age >= 40) {
 					System.out.println("암 검사도 가능합니다."); 
-				} break;
+				}
+			} else {
+				System.out.println("무료 검진 대상이 아닙니다.");
 			}
 		} else {
-			System.out.println("무료 검진 대상이 아닙니다.");
+			System.out.println("내년에 무료 건강검진이 가능합니다.");
 		}
 	}
 }
