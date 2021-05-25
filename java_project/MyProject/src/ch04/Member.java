@@ -5,8 +5,7 @@ import java.util.Calendar;
 
 public class Member {
 	public static void main(String[] args) {
-		Calendar cal = Calendar.getInstance();
-		int thisYear = cal.get(Calendar.YEAR);
+		int thisYear = Calendar.getInstance().get(Calendar.YEAR);
 		int inputYear, age;
 
 		System.out.print("태어난 해(년도)를 입력하세요 : ");
