@@ -50,21 +50,11 @@ public class Student {
 		return Math.round(avr * 10) / 10.0;
 	}
 
-	void scoreInfo() {
-		System.out.println("이름 : " + name);
-		System.out.println("국어 : " + korScore);
-		System.out.println("영어 : " + engScore);
-		System.out.println("수학 : " + mathScore);
-		System.out.println("총점 : " + getTotalSum());
-		System.out.println("평균 : " + getAvrScore());
-		System.out.println();
-	}
-
 	public static void main(String[] args) {
 		int korSum = 0;
 		int engSum = 0;
 		int mathSum = 0;
-		
+
 		Student[] stu = new Student[9];		
 		stu[0] = new Student("A", 100, 80, 96);
 		stu[1] = new Student("B", 88, 90, 75);
@@ -77,21 +67,33 @@ public class Student {
 		stu[8] = new Student("I", 93, 80, 64);
 //		stu[9] = new Student("J", 76, 50, 98);
 
+		System.out.println("이름\t국어 \t영어 \t수학 \t총점 \t평균");
+		System.out.println("----------------------------------------------");
 		for(int i = 0; i < stu.length; i++) {
-			stu[i].scoreInfo();
+			System.out.print(stu[i].name);
+			System.out.print(" \t");
+			System.out.print(stu[i].korScore);
+			System.out.print(" \t");
+			System.out.print(stu[i].engScore);
+			System.out.print(" \t");
+			System.out.print(stu[i].mathScore);
+			System.out.print(" \t");
+			System.out.print(stu[i].getTotalSum());
+			System.out.print(" \t");
+			System.out.println(stu[i].getAvrScore());
+
 			korSum += stu[i].korScore;
 			engSum += stu[i].engScore;
-			mathSum += stu[i].mathScore;
+			mathSum += stu[i].mathScore;			
 		}
-
-		System.out.println("<국어>");
-		System.out.println("총점 : " + korSum);
-		System.out.println("평균 : " + Math.round((double)korSum / stu.length * 10) / 10.0);
-		System.out.println("\n<영어>");
-		System.out.println("총점 : " + engSum);
-		System.out.println("평균 : " + Math.round((double)engSum / stu.length * 10) / 10.0);
-		System.out.println("\n<수학>");
-		System.out.println("총점 : " + mathSum);
-		System.out.println("평균 : " + Math.round((double)mathSum / stu.length * 10) / 10.0);
+		System.out.println("----------------------------------------------");
+		System.out.println("총점" + " \t" + korSum + " \t" + engSum + " \t" + mathSum);
+		System.out.print("평균 \t");
+		System.out.print(Math.round((double)korSum / stu.length * 10) / 10.0);
+		System.out.print(" \t");
+		System.out.print(Math.round((double)engSum / stu.length * 10) / 10.0);
+		System.out.print(" \t");
+		System.out.print(Math.round((double)mathSum / stu.length * 10) / 10.0);
 	}
 }
+
