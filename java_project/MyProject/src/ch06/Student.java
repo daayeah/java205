@@ -65,7 +65,7 @@ public class Student {
 		int engSum = 0;
 		int mathSum = 0;
 		
-		Student[] stu = new Student[10];		
+		Student[] stu = new Student[9];		
 		stu[0] = new Student("A", 100, 80, 96);
 		stu[1] = new Student("B", 88, 90, 75);
 		stu[2] = new Student("C", 90, 68, 77);
@@ -75,7 +75,7 @@ public class Student {
 		stu[6] = new Student("G", 80, 54, 86);
 		stu[7] = new Student("H", 65, 82, 80);
 		stu[8] = new Student("I", 93, 80, 64);
-		stu[9] = new Student("J", 76, 50, 98);
+//		stu[9] = new Student("J", 76, 50, 98);
 
 		for(int i = 0; i < stu.length; i++) {
 			stu[i].scoreInfo();
