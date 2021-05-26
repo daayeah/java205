@@ -88,7 +88,7 @@ public class Student {
 		}
 		System.out.println("----------------------------------------------");
 		System.out.println("총점" + " \t" + korSum + " \t" + engSum + " \t" + mathSum);
-		System.out.print("평균 \t");
+		System.out.print("평균\t");
 		System.out.print(Math.round((double)korSum / stu.length * 10) / 10.0);
 		System.out.print(" \t");
 		System.out.print(Math.round((double)engSum / stu.length * 10) / 10.0);
