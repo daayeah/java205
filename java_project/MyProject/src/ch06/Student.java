@@ -46,7 +46,7 @@ public class Student {
 		return korScore + engScore + mathScore;
 	}
 	public double getAvrScore() {
-		double avr = (korScore + engScore + mathScore) / 3;
+		double avr = (korScore + engScore + mathScore) / 3.0;
 		return Math.round(avr * 10) / 10.0;
 	}
 
