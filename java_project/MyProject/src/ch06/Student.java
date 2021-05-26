@@ -14,39 +14,39 @@ public class Student {
 		this.mathScore = mathScore;		
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 	public String getName() {
 		return name;
 	}
-
-	public void setKorScore(int korScore) {
-		this.korScore = korScore;
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	public int getKorScore() {
 		return korScore;
 	}
-
-	public void setEngScore(int engScore) {
-		this.engScore = engScore;
+	public void setKorScore(int korScore) {
+		this.korScore = korScore;
 	}
+
 	public int getEngScore() {
 		return engScore;
 	}
-
-	public void setMathScore(int mathScore) {
-		this.mathScore = mathScore;
+	public void setEngScore(int engScore) {
+		this.engScore = engScore;
 	}
+
 	public int getMathScore() {
 		return mathScore;
+	}
+	public void setMathScore(int mathScore) {
+		this.mathScore = mathScore;
 	}
 
 	public int getTotalSum() {
 		return korScore + engScore + mathScore;
 	}
 	public double getAvrScore() {
-		double avr = (korScore + engScore + mathScore) / 3.0;
+		double avr = (korScore + engScore + mathScore) / 3;
 		return Math.round(avr * 10) / 10.0;
 	}
 
@@ -64,6 +64,10 @@ public class Student {
 		int korSum = 0;
 		int engSum = 0;
 		int mathSum = 0;
+		
+//		int[] korScore = new int[10];
+//		int[] engScore = new int[10];
+//		int[] mathScore = new int[10];
 
 		Student[] stu = new Student[9];		
 		stu[0] = new Student("A", 100, 80, 96);
