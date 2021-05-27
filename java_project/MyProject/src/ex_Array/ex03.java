@@ -1,6 +1,7 @@
 package ex_Array;
 
-public class ex03 {	public static int[][] shiftArr(int[][] arr){
+public class ex03 {
+	public static int[][] shiftArr(int[][] arr){
 		for(int i = arr.length - 1; i > 0; i--) {
 			int[] temp = arr[i];
 			arr[i] = arr[i - 1];
@@ -20,6 +21,7 @@ public class ex03 {	public static int[][] shiftArr(int[][] arr){
 		}
 		
 		shiftArr(arr);
+		System.out.println("\nShift Array\n");
 
 		for(int i = 0; i < arr.length; i++) {
 			for(int j = 0; j < arr[i].length; j++) {
