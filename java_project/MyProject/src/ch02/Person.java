@@ -12,10 +12,10 @@ public class Person {
 		System.out.println("회원 주민등록번호1 : " + this.idNo1);
 		System.out.println("회원 주민등록번호2 : " + this.idNo2);
 	}
-	
+
 	public static void main(String[] args) {
 		Person person = new Person();
-		
+
 		System.out.println("이름 : " + person.name);
 		person.name = "익명";
 		person.showData();
