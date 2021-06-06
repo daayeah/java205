@@ -24,8 +24,6 @@ public class StringWriter {
 			out.close();
 
 			System.out.println("작성 완료");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
