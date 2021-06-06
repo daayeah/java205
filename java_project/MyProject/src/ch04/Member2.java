@@ -41,5 +41,6 @@ public class Member2 {
 		Member2 m = new Member2();
 		m.vaccinCheck(birthYear);
 		m.checkUp(birthYear);
+		sc.close();
 	}
 }
