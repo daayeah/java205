@@ -33,5 +33,6 @@ public class Member {
 		} else {
 			System.out.println("무료 검진 대상이 아닙니다.");
 		}
+		sc.close();
 	}
 }
