@@ -13,7 +13,7 @@ public class ShowThread extends Thread {
 			System.out.println("안녕하세요. " + tName + "입니다.");
 
 			try {
-				sleep(100);
+				sleep(1000); // 1초간 일시정지 : * (1/1000)
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
