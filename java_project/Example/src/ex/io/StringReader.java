@@ -22,6 +22,7 @@ public class StringReader {
 				}
 				System.out.println(str);
 			}
+			in.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
