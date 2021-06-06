@@ -6,17 +6,17 @@ public class Student {
 	private int engScore;
 	private int mathScore;
 
-	Student(String name, int korScore,
-			int engScore, int mathScore){
+	Student(String name, int korScore, int engScore, int mathScore) {
 		this.name = name;
 		this.korScore = korScore;
 		this.engScore = engScore;
-		this.mathScore = mathScore;		
+		this.mathScore = mathScore;
 	}
 
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -24,6 +24,7 @@ public class Student {
 	public int getKorScore() {
 		return korScore;
 	}
+
 	public void setKorScore(int korScore) {
 		this.korScore = korScore;
 	}
@@ -31,6 +32,7 @@ public class Student {
 	public int getEngScore() {
 		return engScore;
 	}
+
 	public void setEngScore(int engScore) {
 		this.engScore = engScore;
 	}
@@ -38,6 +40,7 @@ public class Student {
 	public int getMathScore() {
 		return mathScore;
 	}
+
 	public void setMathScore(int mathScore) {
 		this.mathScore = mathScore;
 	}
@@ -45,6 +48,7 @@ public class Student {
 	public int getTotalSum() {
 		return korScore + engScore + mathScore;
 	}
+
 	public double getAvrScore() {
 		double avr = (korScore + engScore + mathScore) / 3.0;
 		return Math.round(avr * 10) / 10.0;
@@ -55,7 +59,7 @@ public class Student {
 		int engSum = 0;
 		int mathSum = 0;
 
-		Student[] stu = new Student[9];		
+		Student[] stu = new Student[9];
 		stu[0] = new Student("A", 100, 80, 96);
 		stu[1] = new Student("B", 88, 90, 75);
 		stu[2] = new Student("C", 90, 68, 77);
@@ -69,7 +73,7 @@ public class Student {
 
 		System.out.println("이름\t국어 \t영어 \t수학 \t총점 \t평균");
 		System.out.println("----------------------------------------------");
-		for(int i = 0; i < stu.length; i++) {
+		for (int i = 0; i < stu.length; i++) {
 			System.out.print(stu[i].name);
 			System.out.print(" \t");
 			System.out.print(stu[i].korScore);
@@ -84,16 +88,15 @@ public class Student {
 
 			korSum += stu[i].korScore;
 			engSum += stu[i].engScore;
-			mathSum += stu[i].mathScore;			
+			mathSum += stu[i].mathScore;
 		}
 		System.out.println("----------------------------------------------");
 		System.out.println("총점" + " \t" + korSum + " \t" + engSum + " \t" + mathSum);
 		System.out.print("평균 \t");
-		System.out.print(Math.round((double)korSum / stu.length * 10) / 10.0);
+		System.out.print(Math.round((double) korSum / stu.length * 10) / 10.0);
 		System.out.print(" \t");
-		System.out.print(Math.round((double)engSum / stu.length * 10) / 10.0);
+		System.out.print(Math.round((double) engSum / stu.length * 10) / 10.0);
 		System.out.print(" \t");
-		System.out.print(Math.round((double)mathSum / stu.length * 10) / 10.0);
+		System.out.print(Math.round((double) mathSum / stu.length * 10) / 10.0);
 	}
 }
-

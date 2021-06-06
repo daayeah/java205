@@ -6,7 +6,7 @@ public class Person {
 	String idNo1 = "100000-0000000";
 	long idNo2 = 2000000000000L;
 
-	void showData() {
+	void AllInfo() {
 		System.out.println("회원 이름 : " + this.name);
 		System.out.println("회원 전화번호 : " + this.phoneNo);
 		System.out.println("회원 주민등록번호1 : " + this.idNo1);
@@ -18,6 +18,6 @@ public class Person {
 
 		System.out.println("이름 : " + person.name);
 		person.name = "익명";
-		person.showData();
+		person.AllInfo();
 	}
 }
