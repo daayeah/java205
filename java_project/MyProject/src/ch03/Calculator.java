@@ -56,5 +56,9 @@ public class Calculator {
 		Calculator cal2 = new Calculator();
 		cal2.circum(radius, PI);
 		cal2.area(radius, PI);
+
+		sc.close();
+		sc2.close();
+		sc3.close();
 	}
 }
