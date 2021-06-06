@@ -42,9 +42,11 @@ public class ex01 {
 			int num = sc2.nextInt();
 			arr[i] = num;
 		}
+		
 		System.out.println();
 		System.out.println("생성된 배열 : " + Arrays.toString(arr));
 		System.out.println("최솟값 : " + miniValue(arr));
 		System.out.println("최댓값 : " + maxValue(arr));
+		sc.close();
 	}
 }
