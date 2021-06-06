@@ -4,14 +4,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class ByteFileCopy {
 	public static void main(String[] args) {
 		try {
 			// 파일 바이너리 데이터를 읽어올 스트림 생성 : FileInputStream
-			FileInputStream in = new FileInputStream("origin.pdf");
+			// FileInputStream in = new FileInputStream("origin.pdf");
+			InputStream in = new FileInputStream("origin.pdf"); // 다형성
+
 			// 파일을 쓰기 위한 스트림 생성 : FileOutputStream
-			FileOutputStream out = new FileOutputStream("copy.pdf");
+			// FileOutputStream out = new FileOutputStream("copy.pdf");
+			OutputStream out = new FileOutputStream("copy.pdf"); // 다형성
 
 			// 카피한 데이터의 크기
 			int copyByte = 0;
