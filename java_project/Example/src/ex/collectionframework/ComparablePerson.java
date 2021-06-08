@@ -16,7 +16,7 @@ public class ComparablePerson {
 		Iterator<Person> itr = set.iterator();
 
 		while (itr.hasNext()) {
-			itr.next().AllInfo();
+			itr.next().allInfo();
 		}
 	}
 
@@ -31,7 +31,7 @@ class Person implements Comparable<Person> {
 		this.age = age;
 	}
 
-	public void AllInfo() {
+	public void allInfo() {
 		System.out.printf("%s, %d \n", this.name, this.age);
 	}
 
