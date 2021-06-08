@@ -1,4 +1,4 @@
-package ex.arraylist.friend;
+package ex.arraylist;
 
 public abstract class Friend implements ShowInfo {
 	String name;
@@ -12,11 +12,11 @@ public abstract class Friend implements ShowInfo {
 		this.address = address;
 	}
 
-	public void AllInfo() {
+	public void allInfo() {
 		System.out.println("이    름 : " + name);
 		System.out.println("전화번호 : " + phoneNum);
 		System.out.println("주    소 : " + address);
 	}
 
-	public abstract void BasicInfo();
+	public abstract void basicInfo();
 }
