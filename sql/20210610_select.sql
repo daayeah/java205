@@ -42,6 +42,7 @@ FROM
 WHERE
         deptno = 10
     AND job = 'MANAGER';
+    
 -- 10번 부서의 직원과 관리자 리스트 출력
 SELECT
     *
@@ -50,6 +51,7 @@ FROM
 WHERE
     deptno = 10
     OR job = 'MANAGER';
+    
 -- 10번 부서의 직원을 제외한 나머지 직원 리스트 출력
 SELECT
     *
@@ -64,6 +66,7 @@ FROM
     emp
 WHERE
     deptno != 10;
+    
 -- 10번 부서 관리자의 사원 번호, 이름, 직업 출력
 SELECT
     deptno,
@@ -95,6 +98,7 @@ FROM
     emp
 WHERE
     sal BETWEEN 2000 AND 3000;
+    
 -- 연봉 20% 인상(upsal) 출력
 SELECT
     ename,
@@ -159,6 +163,7 @@ FROM
     emp
 WHERE
     ename LIKE 'F%';
+    
 -- ES로 끝나는 이름을 가진 사원 검색
 SELECT
     ename
@@ -166,6 +171,7 @@ FROM
     emp
 WHERE
     ename LIKE '%ES';
+    
 -- LA를 포함하는 이름을 가진 사원 검색
 SELECT
     ename
@@ -182,6 +188,7 @@ FROM
     emp
 WHERE
     ename LIKE '_A%';
+    
 -- 이름의 세 번째 자리에 문자 A를 포함하는 사원 리스트 출력
 SELECT
     ename
@@ -189,6 +196,7 @@ FROM
     emp
 WHERE
     ename LIKE '__A%';
+    
 -- 이름의 세 번째 자리에 문자 A를 포함하지 않는 사원 리스트 출력
 SELECT
     ename
@@ -205,6 +213,7 @@ FROM
     emp
 WHERE
     comm IS NULL;
+    
 -- 수당이 등록되어 있는 사원 리스트 출력
 SELECT
     *
@@ -223,6 +232,7 @@ FROM
     emp
 ORDER BY
     sal; -- 정렬의 기본은 오름차순
+    
 -- 급여가 많은 사원순으로 출력 -> 내림차순
 SELECT
     ename,
@@ -231,6 +241,7 @@ FROM
     emp
 ORDER BY
     sal DESC;
+    
 -- 급여가 많은 사원순으로 정렬하되 급여가 같은 사원은 이름순으로 정렬
 SELECT
     ename,
