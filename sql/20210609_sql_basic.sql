@@ -65,6 +65,7 @@ SELECT
     sal * 12 + comm      AS ysal2
 FROM
     emp;
+    
 -- 개선 : null 값을 0으로 치환해서 연산
 -- nvl(컬럼 이름, 기본 값) : 컬럼의 값이 null일 때 기본 값으로 치환
 SELECT
