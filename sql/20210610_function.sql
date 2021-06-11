@@ -195,4 +195,4 @@ SELECT
 FROM
     emp;
     
-commit;
+COMMIT;
