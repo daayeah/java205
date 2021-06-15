@@ -219,7 +219,7 @@ SELECT
 FROM
     emp
 WHERE
-    deptno = (
+    deptno IN (
         SELECT
             deptno
         FROM
