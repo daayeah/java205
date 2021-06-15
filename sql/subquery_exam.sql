@@ -75,7 +75,7 @@ WHERE
         SELECT
             MIN(sal)
         FROM
-            emp e
+            emp
         GROUP BY
             deptno
     );
