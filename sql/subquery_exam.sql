@@ -44,7 +44,21 @@ WHERE
         FROM
             emp
     );
-
+    
+SELECT
+    ename,
+    job,
+    sal
+FROM
+    emp
+WHERE
+    sal <= ALL (
+        SELECT
+            sal
+        FROM
+            emp
+    );
+    
 -- 46. 평균급여가 가장 적은 직급의 직급 이름과 직급의 평균을 구하시오.
 SELECT
     job,
@@ -63,21 +77,38 @@ HAVING
             job
     );
 
+SELECT
+    job,
+    AVG(sal)
+FROM
+    emp
+GROUP BY
+    job
+HAVING
+    AVG(sal) <= ALL (
+        SELECT
+            AVG(sal)
+        FROM
+            emp
+        GROUP BY
+            job
+    );
+    
 -- 47. 각 부서의 최소 급여를 받는 사원의 이름, 급여, 부서번호를 표시하시오.
 SELECT
     ename,
     sal,
     deptno
 FROM
-    emp
+    emp e1
 WHERE
-    sal IN (
+    sal = (
         SELECT
             MIN(sal)
         FROM
-            emp
-        GROUP BY
-            deptno
+            emp e2
+        WHERE
+            e1.deptno = e2.deptno
     );
 
 -- 48. 담당업무가 ANALYST 인 사원보다 급여가 적으면서
