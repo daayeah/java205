@@ -1,14 +1,14 @@
 CREATE TABLE phoneInfo_basic (
     idx             NUMBER(6) CONSTRAINT pb_idx_pk PRIMARY KEY,
     fr_name         VARCHAR2(20) CONSTRAINT pb_fn_nn NOT NULL,
-    fr_phonenumbet  VARCHAR2(20) CONSTRAINT pb_fp_nn NOT NULL,
+    fr_phonenumber  VARCHAR2(20) CONSTRAINT pb_fp_nn NOT NULL,
     fr_email        VARCHAR2(20),
     fr_address      VARCHAR2(20),
     fr_regdate      DATE DEFAULT sysdate
 );
 
 COMMENT ON COLUMN phoneInfo_basic.fr_name IS '친구 이름';
-COMMENT ON COLUMN phoneInfo_basic.fr_phonenumbet IS '친구 전화번호';
+COMMENT ON COLUMN phoneInfo_basic.fr_phonenumber IS '친구 전화번호';
 COMMENT ON COLUMN phoneInfo_basic.fr_email IS '친구 이메일';
 COMMENT ON COLUMN phoneInfo_basic.fr_address IS '친구 주소';
 COMMENT ON COLUMN phoneInfo_basic.fr_regdate IS '등록 시간';
