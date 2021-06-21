@@ -14,11 +14,20 @@
 -- 모임 이름, 닉네임
 
 CREATE TABLE contact (
-    pidx         NUMBER(6) CONSTRAINT ct_idx_pk PRIMARY KEY,
-    name         VARCHAR2(20) CONSTRAINT ct_nm_nn NOT NULL,
-    phonenumber  VARCHAR2(20) CONSTRAINT ct_pn_nn NOT NULL,
-    address      VARCHAR2(20) DEFAULT 'N',
-    email        VARCHAR2(20) DEFAULT 'N'
+    pidx      NUMBER(6) CONSTRAINT ct_pidx_pk PRIMARY KEY,
+    name      VARCHAR2(10) CONSTRAINT ct_name_nn NOT NULL,
+    number    VARCHAR2(20) CONSTRAINT ct_num_nn NOT NULL,
+    address   VARCHAR2(20) DEFAULT 'N' CONSTRAINT ct_addr_nn NOT NULL,
+    email     VARCHAR2(20) DEFAULT 'N' CONSTRAINT ct_email_nn NOT NULL,
+    type      VARCHAR2(4) CONSTRAINT ct_type_ck CHECK ( type IN ( 'univ', 'com', 'cafe' ) ) NOT NULL,
+    
+    major     VARCHAR2(10),
+    grade     NUMBER(1),
+    company   VARCHAR2(20),
+    deptname  VARCHAR2(10),
+    position  VARCHAR2(10),
+    cafe      VARCHAR2(20),
+    nickname  VARCHAR2(10)
 );
 
 COMMENT ON COLUMN contact.name IS '이름';
@@ -44,13 +53,13 @@ CREATE TABLE com (
     pidx      NUMBER(6) CONSTRAINT co_idx_pk PRIMARY KEY,
     company   VARCHAR2(20) DEFAULT 'N' CONSTRAINT co_cp_nn NOT NULL,
     deptname  VARCHAR2(20) DEFAULT 'N' CONSTRAINT co_dn_nn NOT NULL,
-    title      VARCHAR2(20) DEFAULT 'N' CONSTRAINT co_tt_nn NOT NULL,
+    position     VARCHAR2(20) DEFAULT 'N' CONSTRAINT co_po_nn NOT NULL,
     ref       NUMBER(6) CONSTRAINT co_ref_fk REFERENCES contact ( pidx ) NOT NULL
 );
 
 COMMENT ON COLUMN com.company IS '회사 친구의 회사 이름';
 COMMENT ON COLUMN com.deptname IS '회사 친구의 부서 이름';
-COMMENT ON COLUMN com.title IS '회사 친구의 직급';
+COMMENT ON COLUMN com.position IS '회사 친구의 직급';
 COMMENT ON COLUMN com.ref IS '친구의 기본 정보 외래키';
 
                                           
@@ -122,10 +131,7 @@ CREATE INDEX emp_index ON emp ( ename );
 --    view 의 이름은 emp_view 로 하시오. 
 CREATE OR REPLACE VIEW emp_view AS
     SELECT
-        e.empno,
-        e.ename,
-        d.deptno,
-        d.dname
+        *
     FROM
         emp   e,
         dept  d
