@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child {
+            background-color: rgb(255, 255, 0);
+            /* background-color: rgba(200, 210, 0, 0.5);
+            background-color: #ff0000;
+            background-color: #0f0; */
+        }
+
+        p:nth-child(2) {
+            font-size: 100%;
+        }
+
+        p:nth-child(3) {
+            font-size: 150%;
+        }
+
+        p:nth-child(4) {
+            font-size: 200%;
+        }
+
+        p:nth-child(5) {
+            font-size: 1.0em;
+        }
+
+        p:nth-child(6) {
+            font-size: 1.5em;
+        }
+
+        p:nth-child(7) {
+            font-size: 2.0em;
+        }
+
+        p:nth-child(8) {
+            font-size: 16px;
+        }
+
+        p:nth-child(9) {
+            font-size: 24px;
+        }
+
+        p:nth-child(10) {
+            font-size: 36px;
+        }
+
+        p:last-child {
+            background-color: salmon;
+        }
+    </style>
+    <style>
+        body {
+            background-image: url(../images/mini1.jpg);
+        }
+
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.box {
+            width: 50%;
+            height: 300px;
+            background-image: url(../mini2.jpg);
+        }
+
+        div.border_box {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+
+            /* border-width: 10px;
+            border-style: dashed;
+            border-color: sandybrown; */
+            
+            border: 10px dashed sandybrown;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+
+    <div class="box"></div>
+    <div class="border_box"></div>
+</body>
+
+</html>
