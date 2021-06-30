@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        /* 여러 개의 선택자 지정 */
+        boby,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1::selection,
+        p::selection {
+            background-color: lightseagreen;
+            color: lightyellow;
+        }
+
+        hr {
+            margin: 20px;
+        }
+
+        /* 전체 선택자 */
+        /* * {
+            color: purple;
+        } */
+
+        /* 태그 선택자 */
+        /* h1 {
+            background-color: yellow;
+            margin-top: 30px;
+            margin-left: 30px;
+        } */
+
+        p {
+            background-color: chartreuse;
+        }
+
+        /* 아이디 선택자 */
+        #title {
+            font-size: 16px;
+        }
+
+        /* 클래스 선택자 */
+        .font_a {
+            font-style: italic;
+        }
+
+        .font_b {
+            font-weight: 100;
+        }
+
+        /* 전체/태그 선택지 주석 처리함 */
+        #header {
+            background-color: red;
+            color: white;
+            width: 400px;
+            /* 상하 좌우 간격 */
+            margin: 10px auto;
+        }
+
+        #aside {
+            background-color: blue;
+            color: white;
+            width: 50%;
+        }
+
+        #content {
+            background-color: green;
+            color: white;
+            width: 200px;
+        }
+
+        .font_color_blue {
+            color: blue;
+        }
+
+        li.back_color_green {
+            background-color: yellowgreen;
+        }
+
+        h1.back_color_green {
+            background-color: yellowgreen;
+        }
+
+        /* 속성 선택자 */
+        input[type] {
+            width: 150px;
+            height: 50px;
+            /* 16px *1.5 -> 24px */
+            font-size: 150%;
+        }
+
+        input[type=text] {
+            background-color: yellow;
+        }
+
+        input[type=password] {
+            background-color: springgreen;
+        }
+
+        .img {
+            width: 200px;
+            height: 250px;
+        }
+
+        img[src$=jpg] {
+            border: 5px solid red;
+        }
+
+        img[src$=png] {
+            border: 5px solid blue;
+        }
+
+        img[src$=gif] {
+            border: 5px solid black;
+        }
+
+        /* 후손 선택자 : 부모선택(공백)선택자 */
+        #header1 h1 {
+            color: red;
+        }
+
+        #section h1 {
+            color: orange;
+        }
+
+        /* 자손 선택자 : 부모선택>선택자 */
+        #header1>h1 {
+            background-color: palegoldenrod;
+        }
+
+        #section>h1 {
+            background-color: palevioletred;
+        }
+
+        /* 동위 선택자 */
+        /* 1. 기준 요소 바로 뒤에 위치하는 요소 선택 : + */
+        #title1+h2 {
+            background-color: rebeccapurple;
+        }
+
+        /* 2. 기준 요소 뒤에 존재하는 요소 선택 : ~ */
+        #title1~h2 {
+            background-color: grey;
+        }
+
+        /* 선택 영역에 마우스 커서가 위치하는 경우 : hover */
+        #btn00:hover {
+            background-color: crimson;
+            color: white;
+        }
+
+        #btn00:active {
+            background-color: teal;
+            color: white;
+        }
+
+        h1>a:hover {
+            color: deeppink;
+        }
+
+        /* 입력 양식 태그의 상태로 선택 */
+        input:disabled {
+            background-color: black;
+        }
+
+        input:enabled {
+            width: 200px;
+            height: 35px;
+            font-size: 1.2em;
+        }
+
+        input:focus {
+            border: 5px solid red;
+        }
+
+        div.box {
+            width: 500px;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        #chk {
+            display: none;
+        }
+
+        input[type=checkbox]:checked {
+            width: 30px;
+            height: 30px;
+        }
+
+        input[type=checkbox]:checked+div {
+            background-color: blanchedalmond;
+            height: 0px;
+            overflow: hidden;
+            display: none;
+        }
+
+        label {
+            font-size: 200%;
+            font-weight: bold;
+        }
+
+        ol {
+            overflow: hidden;
+            list-style: none;
+        }
+
+        ol>li {
+            float: left;
+            /* width: 100px; */
+            padding: 10px 30px;
+        }
+
+        ol>li:nth-child(2n) {
+            background-color: plum;
+        }
+
+        ol>li:nth-child(2n+1) {
+            background-color: cyan;
+        }
+
+        ol>li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        ol>li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        ol>li:hover {
+            background-color: darkcyan;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: mediumvioletred;
+        }
+
+        a:visited {
+            color: mediumvioletred;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!-- class : 여러 개 적용 가능 -->
+    <h1 id="title" class="font_a back_color_green">'우주인터넷망' 꿈꾸는 일론 머스크, '스타링크'에 300억달러 투입</h1>
+    <p class="font_a font_b">일론 머스크 테슬라 최고경영자(CEO)의 말은 현실이 될 수 있을까. 그는 스페이스X의 위성 인터넷망 '스타링크'의 서비스 지역을 전 세계로 확대해 수십만명의
+        이용자를 확보하겠다는 목표를 제시했다. 스타링크 서비스 구축에만 300억달러(약 33조원)를 투자할 것으로 알려졌다.</p>
+    <hr>
+    <div id="header">
+        <h1>header</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>aside</h1>
+        </div>
+        <div id="content">
+            <h1>content</h1>
+        </div>
+    </div>
+    <hr>
+    <ul>
+        <li class="font_color_blue">사과</li>
+        <li class="back_color_green">바나나</li>
+        <li class="font_color_blue">오렌지</li>
+        <li>레몬</li>
+    </ul>
+    <hr>
+    <input type="text"> <input type="password">
+    <hr>
+    <img src="a.jpg" alt="a.jpg" class="img">
+    <img src="b.png" alt="b.png" class="img">
+    <img src="c.gif" alt="c.gif" class="img">
+    <hr>
+    <div id="header1">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, conse
+            ctetur adipiscing elit.</p>
+    </div>
+    <hr>
+    <h2>header2_0</h2>
+    <h1 id="title1">header1</h1>
+    <h2>header2_1</h2>
+    <h2>header2_2</h2>
+    <h2>header2_3</h2>
+    <h2>header2_4</h2>
+    <h2>header2_5</h2>
+    <hr>
+    <h2>header2_6</h2>
+    <hr>
+    <h1><a href="#">click</a></h1>
+    <h1 id="btn00">button</h1>
+    <hr>
+    <input>
+    <input value="test">
+    <input disabled value="test">
+    <hr>
+    <label for="chk">check</label>
+    <input id="chk" type="checkbox">
+    <input type="checkbox">
+    <div class="box">
+        <h1>개인정보보호정책</h1>
+        <p>
+            개인 정보를 활용합니다.
+        </p>
+    </div>
+    <hr>
+    <ol>
+        <li><a href="http://naver.com">naver</a></li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+    </ol>
+</body>
+
+</html>
