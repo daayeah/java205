@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px 0 0 15px;
+        }
+
+        /* 헤더 영역 스타일 */
+        header {
+            width: 800px;
+            height: 100px;
+        }
+
+        header>h1 {
+            margin-top: 30px;
+            margin-left: 30px;
+            font-size: 200%;
+        }
+
+        header>p {
+            margin-left: 32px;
+            font-size: 12px;
+        }
+
+        /* 네비게이션 바 스타일 */
+        nav {
+            width: 800px;
+            height: 35px;
+            line-height: 35px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav li {
+            list-style: none;
+            float: left;
+            font-size: 12px;
+            width: 85px;
+            margin-left: 10px;
+        }
+
+        /* 검색창 스타일 */
+        #search {
+            width: 164px;
+            height: 35px;
+            float: right;
+            padding: 5px;
+        }
+
+        #search>input {
+            width: 120px;
+            height: 20px;
+            font-size: 1.2em;
+            border-radius: 20px 0 0 20px;
+            float: left;
+            border: 2px solid #ddd;
+        }
+
+        /* 검색 버튼 */
+        #search>button {
+            width: 40px;
+            height: 24px;
+            background-color: #ddd;
+            font-size: 12px;
+            float: right;
+            border-radius: 0 20px 20px 0;
+            border: 2px solid #ddd;
+        }
+
+        #search>button:hover {
+            background: gray;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* 섹션 영역 스타일 */
+        #wrap {
+            width: 800px;
+            padding: 10px;
+        }
+
+        section {
+            width: 600px;
+            float: left;
+        }
+
+        /* 아티클 영역 스타일 */
+        article {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        article>h1 {
+            padding: 25px 0 5px 0;
+        }
+
+        article>p {
+            padding: 10px 0 15px 0;
+            font-size: 12px;
+        }
+
+        /* 어사이드 영역 스타일 */
+        aside {
+            width: 200px;
+            height: 600px;
+            float: left;
+        }
+
+        aside>h1 {
+            font-size: 100%;
+            padding: 20px 0 3px 15px;
+        }
+
+        aside li {
+            list-style: none;
+            font-size: 12px;
+            padding: 0 0 3px 25px;
+        }
+
+        /* 푸터 영역 스타일 */
+        footer {
+            width: 600px;
+            font-size: 16px;
+            color: blue;
+            margin: 0 0 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <h1>HTML5 Example Preview</h1>
+        <p>한빛 아카데미</p>
+    </header>
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+        <!-- 검색창 영역 -->
+        <div id="search">
+            <input>
+            <button>검색</button>
+            </span>
+    </nav>
+    <div id="wrap">
+        <!-- 섹션 영역 -->
+        <section>
+            <!-- 아티클 영역 -->
+            <article>
+                <h1>HTML5 개요와 활용</h1>
+                <p>2013년 2월 14일</p>
+                <img src="http://placehold.it/430x280">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis ut elit id fermentum.
+                    Vestibulum vitae mauris lacinia nisl sollicitudin eleifend. Nullam lobortis id felis nec
+                    ullamcorper. Nunc sed velit sit amet risus vulputate ultrices. Phasellus sagittis porta augue et
+                    lacinia. Nam nulla odio, scelerisque vel risus ut, efficitur iaculis turpis. Duis id congue felis.
+
+                    Etiam ut porta elit. Vestibulum mi ex, imperdiet in bibendum ac, hendrerit quis purus. Maecenas
+                    fringilla pulvinar enim vitae congue. Ut eget nisi sodales, luctus dui vitae, tempus nisl. Cras nec
+                    neque consequat, commodo ligula in, viverra mauris. Integer lacinia commodo interdum. Donec maximus
+                    gravida suscipit. Fusce tincidunt, est ut commodo faucibus, ex enim faucibus eros, vel hendrerit
+                    quam neque a felis. Ut ut gravida ligula. Duis scelerisque, nisl ac mollis iaculis, erat nibh porta
+                    lacus, scelerisque condimentum eros orci ut eros. Mauris ornare neque ac laoreet blandit. Sed id
+                    justo mattis, tristique quam non, bibendum magna.
+
+                    Etiam et erat dignissim, malesuada dolor vestibulum, iaculis eros. Sed porttitor sed leo quis
+                    imperdiet. Proin euismod enim eros, et venenatis sapien dignissim eu. Vivamus sagittis, mi sed
+                    scelerisque laoreet, ligula purus sagittis mi, in vehicula libero eros eu ipsum. Suspendisse
+                    potenti. Praesent ac leo pulvinar, ullamcorper felis vitae, euismod eros. Curabitur ut eleifend
+                    urna, vel hendrerit leo.</p>
+            </article>
+            <article>
+                <h1>HTML5 응용과 실습</h1>
+                <p>2013년 2월 17일</p>
+                <img src="http://placehold.it/430x280">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis ut elit id fermentum.
+                    Vestibulum vitae mauris lacinia nisl sollicitudin eleifend. Nullam lobortis id felis nec
+                    ullamcorper. Nunc sed velit sit amet risus vulputate ultrices. Phasellus sagittis porta augue et
+                    lacinia. Nam nulla odio, scelerisque vel risus ut, efficitur iaculis turpis. Duis id congue felis.
+
+                    Etiam ut porta elit. Vestibulum mi ex, imperdiet in bibendum ac, hendrerit quis purus. Maecenas
+                    fringilla pulvinar enim vitae congue. Ut eget nisi sodales, luctus dui vitae, tempus nisl. Cras nec
+                    neque consequat, commodo ligula in, viverra mauris. Integer lacinia commodo interdum. Donec maximus
+                    gravida suscipit. Fusce tincidunt, est ut commodo faucibus, ex enim faucibus eros, vel hendrerit
+                    quam neque a felis. Ut ut gravida ligula. Duis scelerisque, nisl ac mollis iaculis, erat nibh porta
+                    lacus, scelerisque condimentum eros orci ut eros. Mauris ornare neque ac laoreet blandit. Sed id
+                    justo mattis, tristique quam non, bibendum magna.
+
+                    Etiam et erat dignissim, malesuada dolor vestibulum, iaculis eros. Sed porttitor sed leo quis
+                    imperdiet. Proin euismod enim eros, et venenatis sapien dignissim eu. Vivamus sagittis, mi sed
+                    scelerisque laoreet, ligula purus sagittis mi, in vehicula libero eros eu ipsum. Suspendisse
+                    potenti. Praesent ac leo pulvinar, ullamcorper felis vitae, euismod eros. Curabitur ut eleifend
+                    urna, vel hendrerit leo.</p>
+            </article>
+        </section>
+        <!-- 어사이드 영역 -->
+        <aside>
+            <h1>카테고리</h1>
+            <ul>
+                <li>데이터</li>
+                <li>데이터</li>
+                <li>데이터</li>
+                <li>데이터</li>
+                <li>데이터</li>
+            </ul>
+            <h1>최근 글</h1>
+            <ul>
+                <li>데이터</li>
+                <li>데이터</li>
+                <li>데이터</li>
+                <li>데이터</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>Created By Team-HeXagon</footer>
+</body>
+
+</html>
