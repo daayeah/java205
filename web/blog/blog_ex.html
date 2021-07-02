@@ -16,7 +16,7 @@
             padding: 20px 0 0 15px;
         }
 
-        /* 헤더 영역 스타일 */
+        /* header 영역 */
         header {
             width: 800px;
             height: 100px;
@@ -33,7 +33,7 @@
             font-size: 12px;
         }
 
-        /* 네비게이션 바 스타일 */
+        /* navigation 영역 */
         nav {
             width: 800px;
             height: 35px;
@@ -50,7 +50,7 @@
             margin-left: 10px;
         }
 
-        /* 검색창 스타일 */
+        /* search 영역 */
         #search {
             width: 164px;
             height: 35px;
@@ -68,7 +68,7 @@
             padding: 0 10px;
         }
 
-        /* 검색 버튼 */
+        /* search button */
         #search>button {
             width: 40px;
             height: 24px;
@@ -85,7 +85,7 @@
             cursor: pointer;
         }
 
-        /* 섹션 영역 스타일 */
+        /* content 영역 */
         #wrap {
             width: 800px;
             padding: 10px;
@@ -96,7 +96,6 @@
             float: left;
         }
 
-        /* 아티클 영역 스타일 */
         article {
             padding-bottom: 10px;
             border-bottom: 1px solid #ddd;
@@ -111,7 +110,6 @@
             font-size: 12px;
         }
 
-        /* 어사이드 영역 스타일 */
         aside {
             width: 200px;
             height: 600px;
@@ -129,7 +127,7 @@
             padding: 0 0 3px 25px;
         }
 
-        /* 푸터 영역 스타일 */
+        /* footer 영역 */
         footer {
             width: 600px;
             font-size: 16px;
@@ -140,12 +138,14 @@
 </head>
 
 <body>
-    <!-- 헤더 영역 -->
+    <!-- header 시작 -->
     <header>
         <h1>HTML5 Example Preview</h1>
         <p>한빛 아카데미</p>
     </header>
-    <!-- 네비게이션 영역 -->
+    <!-- header 끝 -->
+
+    <!-- navigation 시작 -->
     <nav>
         <ul>
             <li>HTML5</li>
@@ -158,10 +158,11 @@
             <button>검색</button>
         </div>
     </nav>
+    <!-- navigation 끝 -->
+
+    <!-- content 시작 -->
     <div id="wrap">
-        <!-- 섹션 영역 -->
         <section>
-            <!-- 아티클 영역 -->
             <article>
                 <h1>HTML5 개요와 활용</h1>
                 <p>2013년 2월 14일</p>
@@ -209,26 +210,30 @@
                     urna, vel hendrerit leo.</p>
             </article>
         </section>
-        <!-- 어사이드 영역 -->
         <aside>
             <h1>카테고리</h1>
             <ul>
-                <li>데이터</li>
-                <li>데이터</li>
-                <li>데이터</li>
-                <li>데이터</li>
-                <li>데이터</li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
             </ul>
             <h1>최근 글</h1>
             <ul>
-                <li>데이터</li>
-                <li>데이터</li>
-                <li>데이터</li>
-                <li>데이터</li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
             </ul>
         </aside>
     </div>
+    <!-- content 끝 -->
+
+    <!-- footer 시작 -->
     <footer>Created By Team-HeXagon</footer>
+    <!-- footer 끝 -->
+
 </body>
 
 </html>
