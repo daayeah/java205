@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NAVER_LOGIN</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+            font-family: 돋움;
         }
 
         body {
-            background-color: rgb(242, 243, 243);
+            background-color: f5f6f7;
         }
 
-        header {
+        #logo {
             text-align: center;
         }
 
-        header>img {
-            width: 230px;
+        #logo>a>img {
+            width: 240px;
+            height: 44px;
             margin: 105px 0 58px 0;
         }
 
@@ -31,16 +33,13 @@
             align-items: center;
         }
 
-        input[type=text] {
+        input {
             width: 440px;
             height: 46px;
-            border: 1px solid #ddd;
+            border: 1px solid #dadada;
             margin-bottom: 8px;
             padding: 0 10px;
-        }
-
-        input::placeholder {
-            color: rgb(204, 204, 204);
+            font-size: 14px;
         }
 
         input:hover {
@@ -57,22 +56,22 @@
             margin-top: 3px;
             background-color: #03C75A;
             color: white;
-            cursor: pointer;
-            border: #03C75A;
+            border: 1px solid #03C75A;
             font-size: 16px;
-            font-family: '나눔고딕 Light';
-
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <img src="../images/NAVER Logo_Green.png">
+    <header id="logo">
+        <a href="https://www.naver.com/">
+            <img src="../images/NAVER Logo_Green.png">
+        </a>
     </header>
     <div id="input_wrap">
         <input type="text" placeholder="아이디">
-        <input type="text" placeholder="비밀번호">
+        <input type="password" placeholder="비밀번호">
         <button>로그인</button>
     </div>
 </body>
