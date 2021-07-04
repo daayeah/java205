@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTAGRAM_LOGIN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #FAFAFA;
+        }
+
+        #main_wrap {
+            width: 318px;
+            height: 343px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: white;
+            border: 1px solid #dadada;
+            margin-top: 152px;
+            text-align: center;
+        }
+
+        #logo {
+            text-align: center;
+        }
+
+        #logo>img {
+            width: 160px;
+            margin: 30px 0 29px 0;
+        }
+
+        .box {
+            width: 228px;
+            height: 32px;
+            margin-bottom: 6px;
+            padding: 0 7px;
+            font-size: 11px;
+            border-radius: 3px;
+            border: 1px solid #dadada;
+            background-color: #FAFAFA;
+        }
+
+        input:hover {
+            cursor: text;
+        }
+
+        input:focus {
+            outline-color: #ccc;
+        }
+
+        #login_btn {
+            width: 243px;
+            height: 27px;
+            margin-top: 8px;
+            margin-bottom: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            background-color: rgba(0, 149, 246, .3);
+            cursor: pointer;
+        }
+
+        .hr-sect {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: #a3a3a3;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 8px 23px;
+        }
+
+        .hr-sect::before,
+        .hr-sect::after {
+            content: "";
+            flex-grow: 1;
+            background: #ddd;
+            height: 1px;
+            font-size: 0px;
+            margin: 0px 16px;
+        }
+
+        #fb_login img {
+            width: 150px;
+            margin-top: 11px;
+            margin-bottom: 5px;
+        }
+
+        #reset>a {
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+        #reset>a:link,
+        #reset>a:visited {
+            color: black;
+        }
+
+        #reset>a:active {
+            color: cadetblue;
+        }
+
+        #join {
+            width: 318px;
+            height: 55px;
+            line-height: 55px;
+            background-color: white;
+            border: 1px solid #dadada;
+            margin-top: 26px;
+            font-size: 13px;
+        }
+
+        #join>a {
+            text-decoration: none;
+            color: #0095F6;
+            font-weight: bold;
+        }
+
+        #join>a:active {
+            color: #82c1eb;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_wrap">
+        <div id="logo">
+            <img src="../images/Instagram_Logo.png">
+        </div>
+        <div id="input_wrap">
+            <input type="text" class="box" placeholder="전화번호, 사용자 이름 또는 이메일">
+            <input type="password" class="box" placeholder="비밀번호">
+        </div>
+        <div>
+            <button id="login_btn">로그인</button>
+        </div>
+        <p class="hr-sect">또는</p>
+        <div id="fb_login">
+            <a href="https://www.instagram.com/accounts/login/">
+                <img src="../images/Facebook_Login.png">
+            </a>
+        </div>
+        <div id="reset">
+            <a id="a1" href="https://www.instagram.com/accounts/password/reset/">
+                비밀번호를 잊으셨나요?
+            </a>
+        </div>
+        <div id="join">
+            계정이 없으신가요?
+            <a id="a2" href="https://www.instagram.com/accounts/emailsignup/">
+                가입하기
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
