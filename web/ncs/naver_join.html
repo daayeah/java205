@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVER_JOIN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 돋움;
+        }
+
+        body {
+            background-color: #f5f6f7;
+        }
+
+        #logo {
+            text-align: center;
+        }
+
+        #logo>a>img {
+            width: 240px;
+            height: 44px;
+            margin: 60px 0 25px;
+        }
+
+        #main_wrap {
+            width: 460px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        #main_wrap label, input, select,
+        button, #footer li, #copyright {
+            cursor: pointer;
+        }
+
+        input:focus, select:focus {
+            outline: 1px solid #3cd481;
+        }
+
+        select {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        #title {
+            margin: 10px 0 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #YY, #DD {
+            width: 117px;
+        }
+
+        #MM {
+            width: 147px;
+            height: 53px;
+            margin: 0 2px;
+        }
+
+        #choice {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        #phone {
+            width: 300px;
+            margin-right: 7px;
+        }
+
+        button {
+            height: 53px;
+            color: #fff;
+            background-color: #03c75a;
+            border: 1px solid #dadada;
+            font-size: 15px;
+            font-weight: 100;
+        }
+
+        #verify_btn {
+            width: 115px;
+        }
+
+        #join_btn {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #footer {
+            padding: 35px 15px 5px;
+            height: 20px;
+        }
+
+        #footer li {
+            list-style: none;
+            float: left;
+            font-size: 12px;
+            color: gray;
+        }
+
+        #copyright {
+            height: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+
+        }
+
+        .input_box {
+            height: 51px;
+            border: 1px solid #dadada;
+            margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: lighter;
+            padding: 0 15px;
+        }
+
+        .width_428 {
+            width: 428px;
+        }
+
+        .width_460 {
+            width: 460px;
+        }
+
+        .font_bold {
+            font-weight: bold;
+        }
+
+        .border_left {
+            border-left: 1px solid #ccc;
+        }
+
+        .padding_5 {
+            padding: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="logo">
+        <a href="https://www.naver.com/">
+            <img src="../images/NAVER Logo_Green.png">
+        </a>
+    </header>
+    <div id="main_wrap">
+        <div id="title">
+            <label for="id">아이디</label>
+        </div>
+        <input type="text" id="id" class="input_box width_428">
+        <div id="title">
+            <label for="password">비밀번호</label>
+        </div>
+        <input type="password" id="password" class="input_box width_428">
+        <div id="title">
+            <label for="pw_check">비밀번호 재확인</label>
+        </div>
+        <input type="password" class="input_box width_428" id="pw_check">
+        <div id="title">
+            <label for="name">이름</label>
+        </div>
+        <input type="text" id="name" class="input_box width_428">
+        <div id="title">
+            <label for="YY">생년월일</label>
+        </div>
+        <span id="date_of_birth">
+            <input type="text" id="YY" class="input_box" placeholder="년(4자)">
+            <select id="MM" class="input_box">
+                <option>월</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <input type="text" id="DD" class="input_box" placeholder="일">
+        </span>
+        <div id="title">
+            <label for="gender">성별</label>
+        </div>
+        <select id="gender" class="input_box width_460">
+            <option>성별</option>
+            <option value="남자">남자</option>
+            <option value="여자">여자</option>
+            <option value="선택 안함">선택 안함</option>
+        </select>
+        <div id="title">
+            <label for="email">본인 확인 이메일</label>
+            <span id="choice">(선택)</span>
+        </div>
+        <input type="text" id="email" class="input_box width_428" placeholder="선택입력">
+        <div id="title">
+            <label for="phone">휴대전화</label>
+        </div>
+        <select class="input_box width_460">
+            <option value="233">가나 +233</option>
+            <option value="30">그리스 +30</option>
+            <option value="82" selected>대한민국 +82</option>
+            <option value="1">미국/캐나다 +1</option>
+            <option value="852">홍콩 +852</option>
+        </select>
+        <span>
+            <input type="text" id="phone" class="input_box" placeholder="전화번호 입력">
+            <button id="verify_btn">인증번호 받기</button>
+        </span>
+        <input type="text" class="input_box width_428" placeholder="인증번호 입력하세요">
+        <div>
+            <button id="join_btn" class="width_460">가입하기</button>
+        </div>
+        <div id="footer">
+            <ul>
+                <li class="padding_5">이용약관</li>
+                <li class="padding_5 border_left font_bold">개인정보처리방침</li>
+                <li class="padding_5 border_left">책임의 한계와 법적고지</li>
+                <li class="padding_5 border_left">회원정보 고객센터</li>
+            </ul>
+        </div>
+        <div id="copyright" class="font_bold width_460">
+            © NAVER Corp.
+        </div>
+    </div>
+</body>
+
+</html>
