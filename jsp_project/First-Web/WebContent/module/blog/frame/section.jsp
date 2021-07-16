@@ -4,7 +4,7 @@
 		<h1 class="title">미니언즈 귀여운 매력에 바나나</h1>
 		<p class="date">2021.07.02</p>
 		<!-- 		<img class="post_image" src="../images/mini1.jpg"> -->
-		<img src="..\..\images\mini.jpg" width=500>
+		<img src="..\..\images\mini.jpg" width="500">
 		<p class="post_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
 			lobortis ut elit id fermentum. Vestibulum vitae mauris lacinia nisl sollicitudin eleifend. Nullam
 			lobortis id felis nec ullamcorper. Nunc sed velit sit amet risus vulputate ultrices. Phasellus
@@ -18,7 +18,7 @@
 		<h1 class="title">미니언즈 귀여운 매력에 바나나</h1>
 		<p class="date">2021.07.02</p>
 		<!-- 		<img class="post_image" src="../mini2.jpg"> -->
-		<img src="..\..\images\mini.jpg" width=500>
+		<img src="..\..\images\mini.jpg" width="500">
 		<p class="post_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
 			lobortis ut elit id fermentum. Vestibulum vitae mauris lacinia nisl sollicitudin eleifend. Nullam
 			lobortis id felis nec ullamcorper. Nunc sed velit sit amet risus vulputate ultrices. Phasellus
