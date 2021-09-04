@@ -1,6 +1,7 @@
 package dept.domain;
 
 public class Dept {
+
 	private int deptno;
 	private String dname;
 	private String loc;
@@ -10,11 +11,11 @@ public class Dept {
 		this.dname = dname;
 		this.loc = loc;
 	}
-
+	
 	public Dept() {
-
 	}
-
+	
+	//            deptno
 	public int getDeptno() {
 		return deptno;
 	}
@@ -43,4 +44,9 @@ public class Dept {
 	public String toString() {
 		return "Dept [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
 	}
+	
+	
+	
+	
+
 }

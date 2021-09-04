@@ -1,8 +1,8 @@
 package dept.dao;
 
-import static org.junit.Assert.*;
-
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,13 +14,12 @@ import dept.domain.Dept;
 import jdbc.util.ConnectionProvider;
 
 public class DeptDaoTest {
-	static DeptDao dao;
-	static Connection conn;
-	private Dept dept;
+
+	private static DeptDao dao;
+	Connection conn;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		conn = ConnectionProvider.getConnection();
 		dao = DeptDao.getInstance();
 	}
 
@@ -30,36 +29,18 @@ public class DeptDaoTest {
 
 	@Before
 	public void setUp() throws Exception {
+		conn = ConnectionProvider.getConnection();
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testGetDeptList() {
-		assertNotNull("getDeptList() 메소드 테스트", dao.getDeptList(conn));
+	@Test(expected = SQLIntegrityConstraintViolationException.class)
+	public void testSelectByDeptno() throws SQLException {
+
+		dao.insertDept(conn, new Dept(10, "test", "test"));
+
 	}
 
-	@Test
-	public void testInsertDept() {
-		dept = new Dept(50, "TEST", "SEOUL");
-		assertSame("insertDept() 메소드 테스트", 1, dao.insertDept(conn, dept));
-	}
-
-	@Test
-	public void testDeleteDept() {
-		assertSame("deleteDept() 메소드 테스트", 1, dao.deleteDept(conn, 50));
-	}
-
-	@Test
-	public void testSelectByDeptno() {
-		assertNotNull("selectByDeptno() 메소드 테스트", dao.selectByDeptno(conn, 40));
-	}
-
-	@Test
-	public void testUpdateDept() {
-		dept = new Dept(40, "TEST", "BOSTON");
-		assertSame("updateDept() 메소드 테스트", 1, dao.updateDept(conn, dept));
-	}
 }

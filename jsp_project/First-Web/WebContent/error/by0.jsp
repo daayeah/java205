@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page errorPage="viewErrorMsg.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%@ page errorPage="readErrorMessage.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +11,9 @@
 <style>
 </style>
 <script>
-	
 </script>
 </head>
 <body>
-	<%=10 / 0%>
+	<%= 10/0 %>
 </body>
 </html>

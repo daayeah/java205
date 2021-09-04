@@ -5,7 +5,7 @@
 	// 스크립트릿 영역
 	java.util.Date now = new Date();
 %>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,3 +23,8 @@
 	<h1><%= now %></h1>
 </body>
 </html>
+
+
+
+
+

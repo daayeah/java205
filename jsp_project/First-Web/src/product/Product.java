@@ -2,8 +2,9 @@ package product;
 
 import java.util.Arrays;
 
-// beans 형식의 클래스로 정의 : 상품 정보 저장
+// beans 형식의 클래스로 정의 : 상품정보를 저장
 public class Product {
+
 	// 상품 목록 : 배열
 	private String[] productList = { "item1", "item2", "item3", "item4", "item5" };
 
@@ -11,7 +12,7 @@ public class Product {
 	private int price = 100;
 	private int amount = 1000;
 
-	public String[] getpList() {
+	public String[] getProductList() {
 		return productList;
 	}
 
@@ -22,7 +23,7 @@ public class Product {
 	public int getAmount() {
 		return amount;
 	}
-
+	
 	// ${product.display}
 	public String getDisplay() {
 		return "price : " + this.price + ", amount : " + this.amount;
@@ -30,7 +31,18 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [pList=" + Arrays
-				.toString(productList) + ", price=" + price + ", amount=" + amount + "]";
+		return "Product [pList=" + Arrays.toString(productList) + ", price=" + price + ", amount=" + amount + "]";
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 }
