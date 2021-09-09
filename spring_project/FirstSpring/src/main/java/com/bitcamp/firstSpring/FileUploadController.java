@@ -17,9 +17,10 @@ import com.bitcamp.firstSpring.domain.Report;
 
 @Controller
 public class FileUploadController {
-
+	
 	@Autowired
 	private FileUploadService uploadService;
+	
 
 	final String UPLOAD_URI = "/uploadfile";
 
@@ -31,8 +32,11 @@ public class FileUploadController {
 	@RequestMapping(value = "/upload/upload1")
 	public String upload1(
 
-			@RequestParam("sno") String sno, @RequestParam("sname") String sname,
-			@RequestParam("report") MultipartFile report, Model model, HttpServletRequest request
+			@RequestParam("sno") String sno, 
+			@RequestParam("sname") String sname,
+			@RequestParam("report") MultipartFile report, 
+			Model model, 
+			HttpServletRequest request
 
 	) throws IllegalStateException, IOException {
 
@@ -43,25 +47,26 @@ public class FileUploadController {
 		model.addAttribute("sno", sno);
 		model.addAttribute("sname", sname);
 		model.addAttribute("reportfile", report.getOriginalFilename());
-
+		
 		saveFile(request, report);
-
+		
 		uploadService.fileUpload();
 
 		return "upload/upload";
 	}
-
+	
 	@RequestMapping("/upload/upload2")
 	public String upload2(
-
-			MultipartHttpServletRequest request, Model model
-
-	) throws IllegalStateException, IOException {
-
+			
+			MultipartHttpServletRequest request,
+			Model model
+			
+			) throws IllegalStateException, IOException {
+		
 		String sno = request.getParameter("sno");
 		String sname = request.getParameter("sname");
 		MultipartFile report = request.getFile("report");
-
+		
 		System.out.println("학번 : " + sno);
 		System.out.println("이름 : " + sname);
 		System.out.println("파일 : " + report.getOriginalFilename());
@@ -69,19 +74,21 @@ public class FileUploadController {
 		model.addAttribute("sno", sno);
 		model.addAttribute("sname", sname);
 		model.addAttribute("reportfile", report.getOriginalFilename());
-
+		
 		saveFile(request, report);
-
+		
 		return "upload/upload";
 	}
-
+	
 	@RequestMapping("/upload/upload3")
 	public String upload3(
-
-			Report report, Model model, HttpServletRequest request
-
-	) throws IllegalStateException, IOException {
-
+			
+			Report report,
+			Model model,
+			HttpServletRequest request
+			
+			) throws IllegalStateException, IOException {
+				
 		System.out.println("3.학번 : " + report.getSno());
 		System.out.println("3.이름 : " + report.getSname());
 		System.out.println("3.파일 : " + report.getReport().getOriginalFilename());
@@ -89,11 +96,15 @@ public class FileUploadController {
 		model.addAttribute("sno", report.getSno());
 		model.addAttribute("sname", report.getSname());
 		model.addAttribute("reportfile", report.getReport().getOriginalFilename());
-
+		
 		saveFile(request, report.getReport());
-
+		
+		
 		return "upload/upload";
 	}
+	
+	
+	
 
 	// 사용자 업로드한 파일을 저장하는 메소드
 	private void saveFile(HttpServletRequest request, MultipartFile file) throws IllegalStateException, IOException {

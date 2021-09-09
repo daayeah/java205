@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
 		<li><a href="<c:url value="/view/view1"/>">/view/view1</a></li>
 		<li><a href="<c:url value="/search/search"/>">/search/search</a></li>
 		<li><a href="<c:url value="/upload/uploadForm"/>">/upload/uploadForm</a></li>
-		<!-- /member/mypage?uid=cool -->
+		                      <!-- /member/mypage?uid=cool -->
 		<li><a href="<c:url value="/member/mypage/cool"/>">/member/mypage/cool</a></li>
 		<li><a href="<c:url value="/member/mypage/hot"/>">/member/mypage/hot</a></li>
 		<li><a href="<c:url value="/member/mypage/king"/>">/member/mypage/king</a></li>
@@ -30,3 +31,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+

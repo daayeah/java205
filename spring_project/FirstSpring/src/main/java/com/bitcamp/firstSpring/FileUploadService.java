@@ -7,10 +7,10 @@ import com.bitcamp.firstSpring.dao.Dao;
 
 @Service
 public class FileUploadService {
-
+	
 	@Autowired
 	Dao dao;
-
+	
 	public void fileUpload() {
 		dao.insert();
 	}

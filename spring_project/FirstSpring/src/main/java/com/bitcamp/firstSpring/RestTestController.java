@@ -14,19 +14,21 @@ public class RestTestController {
 	public String getForm() {
 		return "rest/form";
 	}
-
+	
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
-	public String simple(@RequestBody String body) {
-
+	public String simple(
+			@RequestBody String body
+			) {
+		
 		// name=cool&age=11
 		// JSON 데이터를 받을 때 이용
 		// GSON 라이브러리 : JSON -> Java Object
-
+		
 		System.out.println("body : " + body);
-
+		
 		return body;
-		// return "@ResponseBody 를 이용한 응답";
+		//return "@ResponseBody 를 이용한 응답";
 	}
-
+	
 }

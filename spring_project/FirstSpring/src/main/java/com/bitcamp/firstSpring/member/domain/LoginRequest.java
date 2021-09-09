@@ -28,5 +28,7 @@ public class LoginRequest {
 	public String toString() {
 		return "LoginRequest [id=" + id + ", pw=" + pw + "]";
 	}
+	
+	
 
 }

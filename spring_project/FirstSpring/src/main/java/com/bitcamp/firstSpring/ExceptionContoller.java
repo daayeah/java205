@@ -8,21 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ExceptionContoller {
 
 	private String str;
-
+	
 	@RequestMapping("/error/error")
 	public String getPage() {
-
-		// str = "String";
-
+		
+		//str = "String";
+		
 		System.out.println(str.charAt(0));
-
+		
 		return "index";
 	}
-
+	
 	@ExceptionHandler(NullPointerException.class)
 	public String handleNullPointerException(NullPointerException e) {
 		e.printStackTrace();
 		return "error/nullPointer";
 	}
-
+	
+	
 }
