@@ -32,14 +32,10 @@ public class LoginInfo {
 
 	@Override
 	public String toString() {
-		return "LoginInfo [idx="	+ idx
-				+ ", memberId="
-				+ memberId
-				+ ", memberName="
-				+ memberName
-				+ ", memberPhoto="
-				+ memberPhoto
-				+ "]";
+		return "LoginInfo [idx=" + idx + ", memberId=" + memberId + ", memberName=" + memberName + ", memberPhoto="
+				+ memberPhoto + "]";
 	}
+
+	
 
 }

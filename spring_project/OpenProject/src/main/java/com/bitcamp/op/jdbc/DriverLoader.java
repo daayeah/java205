@@ -10,7 +10,7 @@ public class DriverLoader extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 
 		String params = config.getInitParameter("driver");
-
+		
 		try {
 			if (params != null) {
 				Class.forName(params);

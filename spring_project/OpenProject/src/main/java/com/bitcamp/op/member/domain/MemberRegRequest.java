@@ -5,49 +5,61 @@ import org.springframework.web.multipart.MultipartFile;
 public class MemberRegRequest {
 
 	private String memberid;
-	private String memberpw;
+	private String password;
 	private String membername;
-	private MultipartFile memberphoto;
+	private MultipartFile photo;
 
-	public String getMemberId() {
+	public MemberRegRequest() {
+	}
+
+	public MemberRegRequest(String memberid, String password, String membername, MultipartFile photo) {
+		this.memberid = memberid;
+		this.password = password;
+		this.membername = membername;
+		this.photo = photo;
+	}
+
+	public String getMemberid() {
 		return memberid;
 	}
 
-	public void setMemberId(String memberid) {
+	public void setMemberid(String memberid) {
 		this.memberid = memberid;
 	}
 
-	public String getMemberPw() {
-		return memberpw;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setMemberPw(String memberpw) {
-		this.memberpw = memberpw;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getMemberName() {
+	public String getMembername() {
 		return membername;
 	}
 
-	public void setMemberName(String membername) {
+	public void setMembername(String membername) {
 		this.membername = membername;
 	}
 
-	public MultipartFile getMemberPhoto() {
-		return memberphoto;
+	public MultipartFile getPhoto() {
+		return photo;
 	}
 
-	public void setMemberPhoto(MultipartFile memberphoto) {
-		this.memberphoto = memberphoto;
+	public void setPhoto(MultipartFile photo) {
+		this.photo = photo;
 	}
 
 	@Override
 	public String toString() {
-		return "MemberRegRequest [memberid=" + memberid	+ ", memberpw="	+ memberpw
-				+ ", membername=" + membername + ", memberphoto=" + memberphoto.getOriginalFilename() + "]";
+		return "MemberRegRequest [memberid=" + memberid + ", password=" + password + ", membername=" + membername
+				+ ", photo=" + photo + "]";
 	}
 
+	// MemberRegRequest -> Member
 	public Member toMember() {
-		return new Member(0, memberid, memberpw, membername, null, null);
+		return new Member(0, memberid, password, membername, null, null);
 	}
+
 }

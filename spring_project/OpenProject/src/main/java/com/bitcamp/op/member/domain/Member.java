@@ -3,20 +3,27 @@ package com.bitcamp.op.member.domain;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Member {
 
 	private int idx;
 	private String memberid;
-	private String memberpw;
+	@JsonIgnore
+	private String password;
 	private String membername;
 	private String memberphoto;
+	//@JsonFormat(shape = Shape.STRING)
+	@JsonFormat(pattern = "yyyy.MM.dd. HH:mm")
 	private Timestamp regdate;
 
-	public Member(int idx, String memberid, String memberpw, String username, String memberphoto, Timestamp regdate) {
+	public Member(int idx, String memberid, String password, String username, String memberphoto, Timestamp regdate) {
 		this.idx = idx;
 		this.memberid = memberid;
-		this.memberpw = memberpw;
-		this.membername = membername;
+		this.password = password;
+		this.membername = username;
 		this.memberphoto = memberphoto;
 		this.regdate = regdate;
 	}
@@ -32,57 +39,62 @@ public class Member {
 		this.idx = idx;
 	}
 
-	public String getMemberId() {
+	public String getMemberid() {
 		return memberid;
 	}
 
-	public void setMemberId(String memberid) {
+	public void setMemberid(String memberid) {
 		this.memberid = memberid;
 	}
 
-	public String getMemberPw() {
-		return memberpw;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setMemberPw(String memberpw) {
-		this.memberpw = memberpw;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getMemberName() {
+	public String getMembername() {
 		return membername;
 	}
 
-	public void setMemberName(String membername) {
+	public void setMembername(String membername) {
 		this.membername = membername;
 	}
 
 	public Timestamp getRegdate() {
-		return new Timestamp(regdate.getTime() - (1000 * 60 * 60 * 9));
+		return new Timestamp(regdate.getTime()-(1000*60*60*9));
 	}
 
 	public void setRegdate(Timestamp regdate) {
 		this.regdate = regdate;
 	}
 
-	public String getMemberPhoto() {
+	public String getMemberphoto() {
 		return memberphoto;
 	}
 
-	public void setMemberPhoto(String memberphoto) {
+	public void setMemberphoto(String memberphoto) {
 		this.memberphoto = memberphoto;
 	}
 
+	// java.sql.TimeStamp -> java.util.Date
 	public Date getDate() {
 		return new Date(getRegdate().getTime());
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Member [idx=" + idx + ", memberid=" + memberid + ", memberpw=" + memberpw
-				+ ", membername=" + membername + ", memberphoto=" + memberphoto + ", regdate=" + regdate + "]";
+		return "Member [idx=" + idx + ", memberid=" + memberid + ", password=" + password + ", membername=" + membername
+				+ ", memberphoto=" + memberphoto + ", regdate=" + regdate + "]";
 	}
 
+	// Member -> LoginInfo
 	public LoginInfo toLoginInfo() {
 		return new LoginInfo(this.idx, this.memberid, this.membername, this.memberphoto);
 	}
+
 }

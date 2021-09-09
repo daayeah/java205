@@ -23,7 +23,7 @@ public class JdbcUtil {
 
 	// Statement, PreparedStatement
 	public static void close(Statement stmt) {
-		if (stmt != null) {
+		if(stmt != null) {
 			try {
 				stmt.close();
 			} catch (SQLException e) {
@@ -32,10 +32,10 @@ public class JdbcUtil {
 			}
 		}
 	}
-
+	
 	// ResultSet
 	public static void close(ResultSet rs) {
-		if (rs != null) {
+		if(rs!=null) {
 			try {
 				rs.close();
 			} catch (SQLException e) {
@@ -44,5 +44,6 @@ public class JdbcUtil {
 			}
 		}
 	}
+	
 
 }
